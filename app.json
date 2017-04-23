@@ -1,0 +1,16 @@
+{
+  "pages":[
+    "pages/home/home",
+    "pages/home/home2",
+    "pages/home/BackgroundAudio",
+    "pages/home/audio",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "小睡眠",
+    "navigationBarTextStyle":"white"
+  }
+}

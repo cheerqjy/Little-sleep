@@ -1,0 +1,49 @@
+<view class="mycontainer">
+    <view class="playContainer">
+        <view class="logo">
+            <image src="../../images/logo.png" mode="aspectFit"></image>
+        </view>
+        <view class="musicContrlBox">
+            <text>{{audioArr[number].audioTitle}}</text>
+            <view class="musicPlayBtn" bindtap="iconPlayToggle">
+                <image src="{{playIconToggle}}"></image>
+            </view>
+            <view class="autoClose">
+                <view class="autoCloseTime" animation="{{animationTime}}">
+                    <text>{{defaultDuration}}</text>
+                </view>
+                <view class="rangeBar" animation="{{animationRangeBar}}">
+                    <text>30分钟定时关闭</text>
+                </view>
+            </view>
+            <view class="musicCloseBtn">
+                <image id="iconClose" src="../../images/icon-close.png"  bindtap="bgDown"></image>
+            </view>
+        </view>
+    </view>
+    
+    <view class="listContanier" animation="{{animationList}}">
+        <view class="slideBgWrap">
+            <image id="slideBg" src="../../images/bg-bottom.png"  mode="widthFix"></image>
+            <image id="iconDown" mode="widthFix" src="../../images/icon-down.png" bindtap="bgDown"></image>
+        </view>
+        <view class="miuscList">
+            <view class="miuscItem" wx:for="{{audioArr}}" id="{{index}}" bindtap="listenerButtonPlay">
+                <navigator url="url"></navigator>
+                <view class="classname">
+                    <image src="{{audioArr[index].audioIcon}}" mode="widthFix"></image>
+                </view>
+                <text>{{audioArr[index].audioTitle}}</text>
+            </view>
+            <view class="miuscItem" wx:for="{{audioArr}}" id="{{index}}" bindtap="listenerButtonPlay">
+                <navigator url="url"></navigator>
+                <view class="classname">
+                    <image src="{{audioArr[index].audioIcon}}" mode="widthFix"></image>
+                </view>
+                <text>{{audioArr[index].audioTitle}}</text>
+            </view>
+           
+        </view>
+    </view>
+    
+</view>

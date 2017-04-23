@@ -1,0 +1,33 @@
+<view class="mycontainer">
+    <view class="playContainer">
+        <view class="logo">
+            <image src="../../images/logo.png" mode="aspectFit"></image>
+        </view>
+        <view class="musicBox">
+            <text>{{audioArr[number].audioTitle}}</text>
+            <view class="musicPlayBtn" bindtap="iconPlayToggle">
+                <image src="{{playIconToggle}}"></image>
+            </view>
+            <view class="autoClose" bindtap="listenerButtonGetPlayState">
+                <text>{{defaultDuration}}</text>
+            </view>
+            <view class="musicCloseBtn">
+                <image src="../../images/icon-close.png"></image>
+            </view>
+        </view>
+        
+        <view class="slideBg">
+            <image src="../../images/bg-bottom.png"  mode="widthFix"></image>
+        </view>
+    </view>
+
+    <view class="miuscList">
+        <view class="miuscItem" wx:for="{{audioArr}}" id="{{index}}" bindtap="listenerButtonPlay">
+            <navigator url="url"></navigator>
+           <view class="classname">
+                <image src="{{audioArr[index].audioIcon}}" mode="widthFix"></image>
+           </view>
+            <text>{{audioArr[index].audioTitle}}</text>
+        </view>
+    </view>
+</view>

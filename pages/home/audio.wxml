@@ -1,0 +1,15 @@
+<audio poster="{{audioArr[number].poster}}" name="{{audioArr[number].name}}" author="{{audioArr[number].author}}" src="{{audioArr[number].src}}" autoplay id="myAudio" controls loop="true"></audio>
+
+    <view class="miuscList">
+        <view class="miuscItem" wx:for="{{audioArr}}" id="{{index}}" bindtap="audioPlay">
+            <navigator url="url"></navigator>
+           <view class="classname">
+                <image src="../../images/icon-lianhua.png" mode="widthFix"></image>
+           </view>
+            <text>{{item.name}}{{index}}</text>
+        </view>
+    </view>
+<!--<button type="primary" bindtap="audioPlay">播放</button>
+<button type="primary" bindtap="audioPause">暂停</button>
+<button type="primary" bindtap="audio14">设置当前播放时间为14秒</button>
+<button type="primary" bindtap="audioStart">回到开头</button>-->
